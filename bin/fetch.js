@@ -5,7 +5,7 @@ const axios = require('axios');
  * @param {string} endpoint 
  * @param {string} accessToken 
  */
-async function callApi(endpoint, accessToken) {
+async function callApi(endpoint, accessToken, emailAddress, emailBody) {
 
     const options = {
         headers: {
@@ -61,13 +61,13 @@ async function callApi(endpoint, accessToken) {
       message: {
         subject: 'Hello!!',
         body: {
-          content: 'Your email body',
+          content: emailBody,
           contentType: 'Text',
         },
         toRecipients: [
           {
             emailAddress: {
-              address: 'bregmanmax91@gmail.com',
+              address: emailAddress,
             },
           },
         ],
