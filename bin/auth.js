@@ -23,7 +23,7 @@ const tokenRequest = {
 };
 
 const apiConfig = {
-	uri: process.env.GRAPH_ENDPOINT + 'v1.0/users', // e.g. 'https://graph.microsoft.com/v1.0/users'
+	uri: process.env.GRAPH_ENDPOINT + 'v1.0/users/', // e.g. 'https://graph.microsoft.com/v1.0/users'
 };
 
 /**
@@ -43,5 +43,6 @@ async function getToken(tokenRequest) {
 module.exports = {
 	apiConfig: apiConfig,
 	tokenRequest: tokenRequest,
-	getToken: getToken
+  getToken: getToken, 
+  cca: cca
 };

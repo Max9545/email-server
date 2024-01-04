@@ -22,7 +22,7 @@ async function main() {
             try {
                 const authResponse = await auth.getToken(auth.tokenRequest);
                 const users = await fetch.callApi(auth.apiConfig.uri, authResponse.accessToken);
-                console.log(users);
+                console.log(users, authResponse);
             } catch (error) {
                 console.log(error);
             }
