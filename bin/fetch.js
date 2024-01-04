@@ -59,7 +59,7 @@ async function callApi(endpoint, accessToken) {
     const emailEndpoint = `https://graph.microsoft.com/v1.0/users/d16a6174-a8e1-4faa-bcc6-861ce00493ce/sendMail`;
     const emailPayload = {
       message: {
-        subject: 'Your email subject',
+        subject: 'Hello!!',
         body: {
           content: 'Your email body',
           contentType: 'Text',

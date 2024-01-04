@@ -16,8 +16,8 @@ const options = yargs
 async function main() {
     console.log(`You have selected: ${options.op}`);
 
-    switch (yargs.argv['op']) {
-        case 'getUsers':
+    // switch (yargs.argv['op']) {
+    //     case 'getUsers':
 
             try {
                 const authResponse = await auth.getToken(auth.tokenRequest);
@@ -27,11 +27,11 @@ async function main() {
                 console.log(error);
             }
 
-            break;
-        default:
+            // break;
+        // default:
             console.log('Select a Graph operation first');
-            break;
+            // break;
     }
-};
+// };
 
-main();
+// main();
