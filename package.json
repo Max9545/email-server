@@ -9,7 +9,8 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start-server": "node server.js && npm start"
   },
   "dependencies": {
     "@azure/msal-node": "^1.14.1",
