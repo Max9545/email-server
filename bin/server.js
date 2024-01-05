@@ -2,7 +2,7 @@ const express = require('express');
 // const { main } = require('.');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3005;
 const yargs = require('yargs');
 
 require('dotenv').config();
