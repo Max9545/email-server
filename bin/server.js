@@ -2,7 +2,7 @@ const express = require('express');
 // const { main } = require('.');
 
 const app = express();
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3001;
 const yargs = require('yargs');
 
 require('dotenv').config();
@@ -10,8 +10,8 @@ const cors = require('cors'); // Import the cors middleware
 app.use(cors());
 
 app.use(express.json());
-
-app.post('/getUsers', async (req, res) => {
+ 
+app.post('/sendMail', async (req, res) => {
   console.log('body', req.body)
   // main()
   // try {
@@ -25,6 +25,6 @@ app.post('/getUsers', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+  console.log(`Server is running on port ${port}`)
+})
 
