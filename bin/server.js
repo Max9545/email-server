@@ -19,6 +19,7 @@ app.post('/sendMail', async (req, res) => {
     const auth = require('./auth');
     const authResponse = await auth.getToken(auth.tokenRequest);
     const users = await fetch.callApi(auth.apiConfig.uri, authResponse.accessToken, req.body.email, req.body.message);
+    console.log(users)
 // } catch (error) {
 //     console.log('ERROR', error);
 //   }
