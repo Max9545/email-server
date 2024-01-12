@@ -2,7 +2,7 @@ const express = require('express');
 // const { main } = require('.');
 console.log('Hello THere')
 const app = express();
-// const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 const yargs = require('yargs');
 
 require('dotenv').config();
@@ -26,6 +26,6 @@ app.post('/sendMail', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${process.env.PORT || 3001}`)
+  console.log(`Server is running on port ${port}`)
 })
 

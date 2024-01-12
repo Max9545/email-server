@@ -56,7 +56,7 @@ async function callApi(endpoint, accessToken, emailAddress, emailBody) {
   //   });
   async function sendMail() {
     
-    const emailEndpoint = `https://graph.microsoft.com/v1.0/users/3e8d90a3-4e6c-47fe-8b76-76969830a3c5/sendMail`;
+    const emailEndpoint = `https://graph.microsoft.com/v1.0/users/b7a315e8-4d3e-4f4f-9ae6-46298ffbbb95/sendMail`;
     const emailPayload = {
       message: {
         subject: 'Hello!! Sample Comic Availability Email',
@@ -75,7 +75,7 @@ async function callApi(endpoint, accessToken, emailAddress, emailBody) {
       saveToSentItems: true,
     };
     try {
-      const response = await axios.get('https://graph.microsoft.com/v1.0/users/3e8d90a3-4e6c-47fe-8b76-76969830a3c5/',
+      const response = await axios.get('https://graph.microsoft.com/v1.0/users/b7a315e8-4d3e-4f4f-9ae6-46298ffbbb95/',
       {headers: {
               Authorization: `Bearer ${accessToken}`,
               'Content-Type': 'application/json',
