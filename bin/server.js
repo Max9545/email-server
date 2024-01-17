@@ -8,10 +8,14 @@ const yargs = require('yargs');
 require('dotenv').config();
 const cors = require('cors'); // Import the cors middleware
 app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 app.use(express.json());
  
-app.post('/sendMail', async (req, res) => {
+app.post('/sendMail',cors(corsOptions), async (req, res) => {
   console.log('body', req.body)
   // main()
   // try {
